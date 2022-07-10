@@ -1,3 +1,58 @@
 <resources>
     <string name="app_name">GithubUser</string>
+    <string name="username">Username Pengguna</string>
+    <string name="location">Lokasi</string>
+
+    <string-array name="data_username">
+        <item>bbimantoro</item>
+        <item>alifalifa</item>
+        <item>wayosu</item>
+        <item>fachiri</item>
+        <item>pergijauh</item>
+        <item>nikizefanya</item>
+        <item>brianimanuel</item>
+        <item>cakecaine</item>
+        <item>wordfangs</item>
+        <item>jennierubyjane</item>
+    </string-array>
+
+    <string-array name="data_location">
+        <item>Gorontalo, Indonesia</item>
+        <item>Gorontalo, Indonesia</item>
+        <item>Gorontalo, Indonesia</item>
+        <item>Gorontalo, Indonesia</item>
+        <item>Bandung, Indonesia</item>
+        <item>Jakarta, Indonesia</item>
+        <item>Jakarta, Indonesia</item>
+        <item>Jakarta, Indonesia</item>
+        <item>Bali, Indonesia</item>
+        <item>Seoul, Republic Of Korea</item>
+    </string-array>
+
+    <string-array name="data_name">
+        <item>Bimantoro</item>
+        <item>Alifa</item>
+        <item>Wahyu Usman</item>
+        <item>Fachry</item>
+        <item>Gofar Hilman</item>
+        <item>NIKI</item>
+        <item>RICH BRIAN</item>
+        <item>Nadin Amizah</item>
+        <item>Hindia</item>
+        <item>Jennie</item>
+    </string-array>
+
+    <integer-array name="data_photo">
+        <item>@drawable/avatar_user_1</item>
+        <item>@drawable/avatar_user_8</item>
+        <item>@drawable/avatar_user_3</item>
+        <item>@drawable/avatar_user_2</item>
+        <item>@drawable/avatar_user_4</item>
+        <item>@drawable/avatar_user_5</item>
+        <item>@drawable/avatar_user_7</item>
+        <item>@drawable/avatar_user_6</item>
+        <item>@drawable/avatar_user_9</item>
+        <item>@drawable/avatar_user_10</item>
+    </integer-array>
+
 </resources>
