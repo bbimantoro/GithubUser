@@ -1,5 +1,6 @@
 package com.example.githubuser
 
+import android.content.Intent
 import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -26,7 +27,7 @@ class MainActivity : AppCompatActivity() {
 
     private val listUser: ArrayList<User>
         get() {
-            val dataUsername = resources.getStringArray(R.array.data_username)
+            val dataUsername = resources.getStringArray(R.array.data_name)
             val dataLocation = resources.getStringArray(R.array.data_location)
             val dataPhoto = resources.obtainTypedArray(R.array.data_photo)
             val listUser = ArrayList<User>()
@@ -45,5 +46,12 @@ class MainActivity : AppCompatActivity() {
         }
         val listUserAdapter = ListUserAdapter(list)
         binding.rvGithubUsers.adapter = listUserAdapter
+
+        listUserAdapter.setOnItemClickCallback(object : ListUserAdapter.OnItemClickCallback {
+            override fun onItemClicked(data: User) {
+                val intentToDetail = Intent(this@MainActivity, DetailActivity::class.java)
+                startActivity(intentToDetail)
+            }
+        })
     }
 }

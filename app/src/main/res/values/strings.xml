@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">GithubUser</string>
     <string name="username">Username Pengguna</string>
+    <string name="followers">66</string>
+    <string name="following">88</string>
     <string name="location">Lokasi</string>
 
     <string-array name="data_username">
