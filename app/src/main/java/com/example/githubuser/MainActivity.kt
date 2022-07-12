@@ -27,12 +27,18 @@ class MainActivity : AppCompatActivity() {
 
     private val listUser: ArrayList<User>
         get() {
-            val dataUsername = resources.getStringArray(R.array.data_name)
-            val dataLocation = resources.getStringArray(R.array.data_location)
-            val dataPhoto = resources.obtainTypedArray(R.array.data_photo)
+            val dataName = resources.getStringArray(R.array.name)
+            val dataLocation = resources.getStringArray(R.array.location)
+            val dataPhoto = resources.obtainTypedArray(R.array.avatar)
+            val dataUsername = resources.getStringArray(R.array.username)
             val listUser = ArrayList<User>()
-            for (i in dataUsername.indices) {
-                val user = User(dataUsername[i], dataLocation[i], dataPhoto.getResourceId(i, -1))
+            for (i in dataName.indices) {
+                val user = User(
+                    dataName[i],
+                    dataLocation[i],
+                    dataPhoto.getResourceId(i, -1),
+                    dataUsername[i]
+                )
                 listUser.add(user)
             }
             return listUser
@@ -50,6 +56,7 @@ class MainActivity : AppCompatActivity() {
         listUserAdapter.setOnItemClickCallback(object : ListUserAdapter.OnItemClickCallback {
             override fun onItemClicked(data: User) {
                 val intentToDetail = Intent(this@MainActivity, DetailActivity::class.java)
+                intentToDetail.putExtra("DATA", data)
                 startActivity(intentToDetail)
             }
         })
