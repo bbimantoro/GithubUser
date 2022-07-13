@@ -31,13 +31,21 @@ class MainActivity : AppCompatActivity() {
             val dataLocation = resources.getStringArray(R.array.location)
             val dataPhoto = resources.obtainTypedArray(R.array.avatar)
             val dataUsername = resources.getStringArray(R.array.username)
+            val dataRepository = resources.getStringArray(R.array.repository)
+            val dataFollowers = resources.getStringArray(R.array.followers)
+            val dataFollowing = resources.getStringArray(R.array.following)
+            val dataCompany = resources.getStringArray(R.array.company)
             val listUser = ArrayList<User>()
             for (i in dataName.indices) {
                 val user = User(
                     dataName[i],
                     dataLocation[i],
                     dataPhoto.getResourceId(i, -1),
-                    dataUsername[i]
+                    dataUsername[i],
+                    dataRepository[i],
+                    dataFollowers[i],
+                    dataFollowing[i],
+                    dataCompany[i]
                 )
                 listUser.add(user)
             }

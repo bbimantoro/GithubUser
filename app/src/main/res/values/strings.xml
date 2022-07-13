@@ -4,6 +4,11 @@
     <string name="location">Lokasi</string>
     <string name="object_username_received">Object Username Diterima</string>
     <string name="object_name_received">Object Nama Diterima</string>
+    <string name="followers">Followers</string>
+    <string name="following">Following</string>
+    <string name="repository">Repository</string>
+    <string name="company">Company</string>
+    <string name="follow">Follow</string>
 
     <string-array name="username">
         <item>JakeWharton</item>

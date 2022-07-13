@@ -25,10 +25,6 @@ class ListUserAdapter(private val listUser: ArrayList<User>) :
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
         val (name, location, photo) = listUser[position]
         holder.binding.imgItemPhoto.setImageResource(photo)
-//        Glide.with(holder.itemView.context)
-//            .load(photo)
-//            .circleCrop()
-//            .into(holder.binding.imgItemPhoto)
         holder.binding.tvItemName.text = name
         holder.binding.tvItemLocation.text = location
 
