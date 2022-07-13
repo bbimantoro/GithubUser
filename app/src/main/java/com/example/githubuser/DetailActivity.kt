@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import com.bumptech.glide.Glide
 import com.example.githubuser.databinding.ActivityDetailBinding
 
 class DetailActivity : AppCompatActivity() {
@@ -18,14 +19,21 @@ class DetailActivity : AppCompatActivity() {
         supportActionBar?.title = "Detail User"
 
         val data = intent.getParcelableExtra<User>("DATA") as User
-        binding.civPhoto.setImageResource(data.photo)
-        binding.tvName.text = data.name
-        binding.tvUsername.text = data.username
-        binding.tvRepo.text = data.repository
-        binding.tvFollowers.text = data.followers
-        binding.tvFollowing.text = data.following
-        binding.tvLocation.text = data.location
-        binding.tvCompany.text = data.company
+
+        Glide.with(this)
+            .load(data.photo)
+            .into(binding.civPhoto)
+
+        binding.apply {
+            tvName.text = data.name
+            tvUsername.text = data.username
+            tvRepo.text = data.repository
+            tvFollowers.text = data.followers
+            tvFollowing.text = data.following
+            tvLocation.text = data.location
+            tvCompany.text = data.company
+        }
+
         binding.btnFollow.setOnClickListener {
             Toast.makeText(this, "Anda mengikuti " + data.name, Toast.LENGTH_SHORT).show()
         }

@@ -49,6 +49,7 @@ class MainActivity : AppCompatActivity() {
                 )
                 listUser.add(user)
             }
+            dataPhoto.recycle()
             return listUser
         }
 
