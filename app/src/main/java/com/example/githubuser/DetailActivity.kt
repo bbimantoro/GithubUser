@@ -18,27 +18,27 @@ class DetailActivity : AppCompatActivity() {
 
         supportActionBar?.title = "Detail User"
 
-        val data = intent.getParcelableExtra<User>("DATA") as User
+        val user = intent.getParcelableExtra<User>("DATA") as User
 
         Glide.with(this)
-            .load(data.photo)
+            .load(user.photo)
             .into(binding.civPhoto)
 
         binding.apply {
-            tvName.text = data.name
-            tvUsername.text = data.username
-            tvRepo.text = data.repository
-            tvFollowers.text = data.followers
-            tvFollowing.text = data.following
-            tvLocation.text = data.location
-            tvCompany.text = data.company
+            tvName.text = user.name
+            tvUsername.text = user.username
+            tvRepo.text = user.repository
+            tvFollowers.text = user.followers
+            tvFollowing.text = user.following
+            tvLocation.text = user.location
+            tvCompany.text = user.company
         }
 
         binding.btnFollow.setOnClickListener {
-            Toast.makeText(this, "Anda mengikuti " + data.name, Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Anda mengikuti " + user.name, Toast.LENGTH_SHORT).show()
         }
 
-        Log.d("Detail Data Name", data.name)
-        Log.d("Detail Data Username", data.username)
+        Log.d("Detail Data Name", user.name)
+        Log.d("Detail Data Username", user.username)
     }
 }
