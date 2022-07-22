@@ -1,5 +1,6 @@
 package com.example.githubuser
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -23,12 +24,15 @@ class ListUserAdapter(private val listUser: ArrayList<User>) :
     }
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
-        val (name, location, photo) = listUser[position]
+        val (name, avatar, location, company) = listUser[position]
         Glide.with(holder.itemView.context)
-            .load(photo)
-            .into(holder.binding.imgItemPhoto)
+            .load(avatar)
+            .into(holder.binding.imgItemAvatar)
         holder.binding.tvItemName.text = name
         holder.binding.tvItemLocation.text = location
+        holder.binding.tvItemCompany.text = company
+
+        Log.d("Data Location", holder.binding.tvItemCompany.text.toString())
 
         holder.itemView.setOnClickListener {
             onItemClickCallback.onItemClicked(listUser[holder.adapterPosition])

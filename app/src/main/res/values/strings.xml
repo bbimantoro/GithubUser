@@ -2,16 +2,20 @@
     <string name="app_name">GithubUser</string>
 
     <string name="name">Nama Pengguna</string>
-    <string name="search">Search</string>
-    <string name="search_hint">Cari Username</string>
+    <string name="username">Username</string>
     <string name="location">Lokasi</string>
-    <string name="object_username_received">Object Username Diterima</string>
-    <string name="object_name_received">Object Nama Diterima</string>
     <string name="followers">Followers</string>
     <string name="following">Following</string>
     <string name="repository">Repository</string>
     <string name="company">Company</string>
-    <string name="follow">Follow</string>
+
+    <string name="search">Search</string>
+    <string name="search_hint">Cari Username</string>
+
+    <string name="tab_text_1">Followers</string>
+    <string name="tab_text_2">Following</string>
+    <string name="content_tab_home">Welcome Home</string>
+    <string name="content_tab_text">This is Tab %1$d</string>
 
     <string-array name="username">
         <item>JakeWharton</item>
